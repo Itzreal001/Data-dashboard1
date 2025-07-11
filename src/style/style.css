@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  line-height: 1.6;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+label {
+  font-weight: 500;
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: #cccccc;
+}
+
+select,
+input[type="text"],
+input[type="date"],
+input[type="range"] {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+select:focus,
+input:focus {
+  border-color: #00bcd4;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.2);
+}
+
+#durationDisplay {
+  display: inline-block;
+  margin-left: 10px;
+  font-weight: 500;
+  color: #00bcd4;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 1.5rem;
+}
+
+button {
+  background-color: #00bcd4;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+button:hover {
+  background-color: #0097a7;
+  transform: translateY(-1px);
+}
+
+.material-icons {
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+#chartBuilder,
+#filterSection {
+  background-color: #1e1e1e;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+#dashboard {
+  background-color: #1e1e1e;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  margin-bottom: 2rem;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+canvas {
+  max-width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  .button-row {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  select,
+  input {
+    font-size: 0.95rem;
+  }
+}
